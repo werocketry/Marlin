@@ -197,6 +197,32 @@
   #define E1_CS_PIN                      AUX2_07
 #endif
 
+//--- Winder custom axis routing -------------------------------------------
+// Reuse the Y and Z stepper sockets for the rotary I (A) and J (B) axes.
+#if HAS_I_AXIS
+  #ifndef I_STEP_PIN
+    #define I_STEP_PIN Y_STEP_PIN
+  #endif
+  #ifndef I_DIR_PIN
+    #define I_DIR_PIN  Y_DIR_PIN
+  #endif
+  #ifndef I_ENABLE_PIN
+    #define I_ENABLE_PIN Y_ENABLE_PIN
+  #endif
+#endif
+
+#if HAS_J_AXIS
+  #ifndef J_STEP_PIN
+    #define J_STEP_PIN Z_STEP_PIN
+  #endif
+  #ifndef J_DIR_PIN
+    #define J_DIR_PIN  Z_DIR_PIN
+  #endif
+  #ifndef J_ENABLE_PIN
+    #define J_ENABLE_PIN Z_ENABLE_PIN
+  #endif
+#endif
+
 //
 // Temperature Sensors
 //
