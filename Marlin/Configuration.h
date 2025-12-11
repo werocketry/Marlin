@@ -1301,7 +1301,7 @@
  * Override with M92 (when enabled below)
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 2, 1, 80, 400 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 1, 1, 44, 9 }
 
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.
@@ -1313,7 +1313,8 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 80, 80, 5, 5, 5 }
+// mm/s, feedrate from serial is in dim/min (*60) i.e. mm/min || deg/min
+#define DEFAULT_MAX_FEEDRATE          { 50, 1, 1, 24, 24 } // @ dim/min: [3000, 60, 60, 720, 720]
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1326,7 +1327,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 800, 800, 80, 60, 60 }
+#define DEFAULT_MAX_ACCELERATION      { 800, 1, 1, 60, 60 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
