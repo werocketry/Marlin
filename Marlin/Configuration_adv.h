@@ -4086,7 +4086,7 @@
  *
  * Execute certain G-code commands immediately after power-on.
  */
-//#define STARTUP_COMMANDS "M17 Z"
+#define STARTUP_COMMANDS "G92 A0 B0" // CAM CHANGED
 
 /**
  * G-code Macros
