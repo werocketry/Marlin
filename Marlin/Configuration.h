@@ -1843,7 +1843,7 @@
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR true
 #define INVERT_Z_DIR false
-#define INVERT_I_DIR true // CAM CHANGED
+#define INVERT_I_DIR false
 #define INVERT_J_DIR false
 //#define INVERT_K_DIR false
 //#define INVERT_U_DIR false
@@ -1924,7 +1924,7 @@
 #define Z_MAX_POS 200
 #define I_MIN_POS 0
 #define I_MAX_POS 360 // Mandrel full rotation
-#define J_MIN_POS 0
+#define J_MIN_POS -360
 #define J_MAX_POS 360 // Eye roll, should limit properly
 //#define K_MIN_POS 0
 //#define K_MAX_POS 50
@@ -1964,7 +1964,7 @@
   #define MAX_SOFTWARE_ENDSTOP_X
   #define MAX_SOFTWARE_ENDSTOP_Y
   #define MAX_SOFTWARE_ENDSTOP_Z
-  //#define MAX_SOFTWARE_ENDSTOP_I
+  //#define MAX_SOFTWARE_ENDSTOP_I // CAM CHANGED
   #define MAX_SOFTWARE_ENDSTOP_J
   #define MAX_SOFTWARE_ENDSTOP_K
   #define MAX_SOFTWARE_ENDSTOP_U
