@@ -1314,7 +1314,7 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 // mm/s, feedrate from serial is in dim/min (*60) i.e. mm/min || deg/min
-#define DEFAULT_MAX_FEEDRATE          { 50, 1, 1, 24, 24 } // @ dim/min: [3000, 60, 60, 720, 720]
+#define DEFAULT_MAX_FEEDRATE          { 200, 1, 1, 100, 50 } // @ dim/min: [12000, 60, 60, 6000, 3000]
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1843,7 +1843,7 @@
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR true
 #define INVERT_Z_DIR false
-#define INVERT_I_DIR false
+#define INVERT_I_DIR true
 #define INVERT_J_DIR true
 //#define INVERT_K_DIR false
 //#define INVERT_U_DIR false
